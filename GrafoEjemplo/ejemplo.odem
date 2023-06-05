@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ODEM version="1">
+  <header>
+    <created-by>
+      <exporter version="1.2.0">org.pfsw.tools.cda.ext.export.xml.XmlFileODEMExporter</exporter>
+      <provider>Manfred Duchrow Consulting &amp; Software</provider>
+    </created-by>
+  </header>
+  <context name="apache-camel-1.6.0-camel-core-1.6.0.jar">
+    <container name="C:/Users/Anto/Desktop/sistemas-duc-reduced/apache-camel/apache-camel-1.6.0-camel-core-1.6.0.jar" classification="osgi-bundle">
+	 <namespace name="namespace1">
+        <type name="namespace1.1" classification="class" visibility="public">
+          <dependencies count="2">
+            <depends-on name="namespace1.2" classification="extends" />
+            <depends-on name="namespace1.3" classification="uses" />
+          </dependencies>
+        </type>
+	<type name="namespace1.2" classification="class" visibility="public">
+          <dependencies count="1">
+            <depends-on name="6" classification="implements" />
+          </dependencies>
+        </type>
+	<type name="namespace1.3" classification="class" visibility="public">
+          <dependencies count="2">
+            <depends-on name="namespace1.4" classification="extends" />
+            <depends-on name="namespace2.5" classification="extends" />
+          </dependencies>
+        </type>
+	<type name="namespace1.4" classification="class" visibility="public">
+          <dependencies count="3">
+            <depends-on name="namespace1.1" classification="extends" />
+            <depends-on name="namespace1.2" classification="uses" />
+	    <depends-on name="namespace2.5" classification="uses" />
+          </dependencies>
+        </type>
+      </namespace>
+      <namespace name="namespace2">
+        <type name="namespace2.5" classification="class" visibility="public" isAbstract="yes">
+          <dependencies count="2">
+            <depends-on name="namespace1.1" classification="extends" />
+            <depends-on name="namespace1.3" classification="implements" />
+          </dependencies>
+        </type>
+      </namespace>
+    </container>
+  </context>
+</ODEM>
